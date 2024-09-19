@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1c1c1c; /* Dark background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+/* Card container */
+.content_container {
+    background-color: white;
+    width: 300px;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading styling */
+.heading {
+    background-color: #ff0099;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 25px;
+    text-align: center;
+    position: absolute;
+    top: -30px; /* Makes the heading peek out */
+    left: 30px;
+    right: 20px;
+    border-radius: 8px 8px 5px 5px;
+}
+
+/* Content styling */
+.content {
+    margin-top: 40px; /* Ensure content is below the heading */
+    font-size: 14px;
+    color: black;
+    line-height: 1.5;
+}
+.menu_container{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+.checkbox_toggle{
+    display: none;
+}
+.menu_icon{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    width: 20px;
+    height: 20px;
+    justify-content: space-between;
+}
+.bar{
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    line-height: 5em;
+}
+.menu{
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    width: 100px;
+    z-index: 1;
+}
+ .menu ul li {
+   border-bottom: 1px solid blueviolet;
+   list-style: none;
+
+}
+.menu ul li a{
+    display: block;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+}
+.menu ul li a:hover{
+    background-color: blueviolet;
+}
+.checkbox_toggle:checked ~ .menu {
+    display: block;
+}
